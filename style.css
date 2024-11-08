@@ -1,46 +1,55 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: sans-serif;
 }
-.banner{
+
+/* Banner */
+.banner {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(image.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(image.jpg);
     background-size: cover;
     background-position: center;
 }
-.navbar{
-    width: 88%;
+
+/* Navbar */
+.navbar {
+    width: 90%;
     margin: auto;
     padding: 35px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #fff;
+    flex-wrap: wrap;
 }
-.logo{
+
+.logo {
     width: 120px;
     cursor: pointer;
-    
-    
 }
-.navbar ul li{
+
+/* Navbar Links */
+.navbar ul {
+    display: flex;
+    gap: 20px;
     list-style: none;
-    display: inline-block;
-    margin: 0 20px;
+}
+
+.navbar ul li {
     position: relative;
 }
 
-.navbar ul li a{
+.navbar ul li a {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
-
-
 }
 
-.navbar ul li::after{
+/* Navbar Hover Effect */
+.navbar ul li::after {
     content: '';
     height: 3px;
     width: 0;
@@ -50,42 +59,49 @@
     bottom: -10px;
     transition: 0.5s;
 }
-.navbar ul li:hover::after{
-    width: 100%;
 
+.navbar ul li:hover::after {
+    width: 100%;
 }
-.content{
+
+/* Content */
+.content {
     width: 100%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
     color: #fcfcfc;
+    padding: 0 20px;
 }
-.content h1{
-   font-size: 70px;
-   margin-top: 80px;
+
+.content h1 {
+    font-size: 3rem;
+    margin-top: 80px;
 }
-.content p{
+
+.content p {
     margin: 20px auto;
     font-weight: 100;
-    line-height: 25px;
+    line-height: 1.5;
 }
-button{
+
+button {
     width: 200px;
     padding: 15px 0;
     text-align: center;
     margin: 20px 10px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid#009688;
+    border: 2px solid #009688;
     background: transparent;
-    color: #ebe4e4 ;
+    color: #f8eeee;
     cursor: pointer;
     position: relative;
     overflow: hidden;
 }
-span{
+
+button span {
     background: #009688;
     height: 100%;
     width: 0%;
@@ -96,44 +112,41 @@ span{
     z-index: -1;
     transition: 0.5s;
 }
-button:hover span{
-    width: 100%;
 
+button:hover span {
+    width: 100%;
 }
-button:hover{
+
+button:hover {
     border: none;
 }
 
 
-/* Basic styles for the section */
+/* Responsive Galleries */
 .section {
     padding: 50px;
     text-align: center;
 }
 
-/* Bedroom gallery grid */
-.bedroom-gallery {
+.bedroom-gallery, .dinning, .kitchen {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     margin-top: 20px;
 }
 
-/* Style for images */
-.bedroom-gallery img {
+.bedroom-gallery img, .dinning img, .kitchen img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect on images */
-.bedroom-gallery img:hover {
+.bedroom-gallery img:hover, .dinning img:hover, .kitchen img:hover {
     transform: scale(1.05);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(23, 159, 111, 0.2);
 }
-/* More Designs Button */
-.more-designs-btn {
+.designs-btn{
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
@@ -142,55 +155,11 @@ button:hover{
     font-weight: bold;
     border: 2px solid#009688;
     background: transparent;
-    color: #171414 ;
+    color: #1a1818 ;
     cursor: pointer;
     position: relative;
     overflow: hidden;
 }
-
-/* Hover effect for the button */
-.more-designs-btn:hover {
- 
-    background: #009688;
-   
-  
-
-}
-.dinning{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
-.dinning img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover effect on images */
-.dinning img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-/* More Designs Button */
-.designs-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 25px;
-    font-weight: bold;
-    border: 2px solid#009688;
-    background: transparent;
-    color: #171414 ;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Hover effect for the button */
 .designs-btn:hover {
  
     background: #009688;
@@ -198,51 +167,7 @@ button:hover{
   
 
 }
-
-.kitchen{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
-.kitchen img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover effect on images */
-.kitchen img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-/* More Designs Button */
-.design-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 25px;
-    font-weight: bold;
-    border: 2px solid#009688;
-    background: transparent;
-    color: #171414 ;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Hover effect for the button */
-.design-btn:hover {
- 
-    background: #009688;
-   
-  
-
-}
-
-/* Footer Section */
+/* Footer */
 .footer {
     background-color: #333;
     color: #fff;
@@ -253,7 +178,7 @@ button:hover{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 14 00px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -266,7 +191,7 @@ button:hover{
 .footer-col h3 {
     font-size: 20px;
     margin-bottom: 10px;
-    color: #17b8a5; /* Gold color for headings */
+    color: #17b8a5;
 }
 
 .footer-col p, .footer-col ul, .footer-col a {
@@ -310,47 +235,42 @@ button:hover{
     padding-top: 20px;
     border-top: 1px solid #444;
     font-size: 14px;
-    color: #888;
+    color: #ffffff;
 }
 
-.footer-bottom p {
-    margin: 0;
-}
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .navbar ul {
         flex-direction: column;
+        gap: 10px;
+        align-items: center;
     }
-    
+
     .content h1 {
-        font-size: 40px;
+        font-size: 2.5rem;
     }
 
     .content p {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-        width: 400px;
+    button {
+        width: 150px;
     }
 }
 
 @media (max-width: 480px) {
-    .navbar h1 {
-        font-size: 20px;
-    }
-
     .content h1 {
-        font-size: 30px;
+        font-size: 2rem;
     }
 
-    .banner {
-        padding: 10px;
-    }
-    .footer-col h3 {
-        font-size: 12px;
+    .navbar {
+        padding: 20px 0;
         flex-direction: column;
-        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
     }
 }
