@@ -242,78 +242,6 @@ button:hover{
 
 }
 
-/* Contact Me Section */
-.contact-section {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.contact-section h2 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.contact-section p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.form-group label {
-    display: block;
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-    color: #6ec6c3;
-    resize: none;
-    transition: border-color 0.3s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #4ebe93;
-    outline: none;
-}
-
-.submit-btn {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.submit-btn:hover {
-    background-color: #555;
-}
 /* Footer Section */
 .footer {
     background-color: #333;
@@ -419,12 +347,9 @@ button:hover{
     .banner {
         padding: 10px;
     }
-
-    .contact-section h2 {
-        font-size: 20px;
-    }
-
     .footer-col h3 {
         font-size: 16px;
+        flex-direction: column;
+        text-align: center;
     }
 }
