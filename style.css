@@ -315,7 +315,20 @@ button:hover{
     background-color: #555;
 }
 
+/* Responsive Contact Section */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 15px;
+    }
 
+    .contact-section h2 {
+        font-size: 24px;
+    }
+
+    .contact-section p {
+        font-size: 14px;
+    }
+}
 
 /* Footer Section */
 .footer {
@@ -391,7 +404,18 @@ button:hover{
 .footer-bottom p {
     margin: 0;
 }
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .footer-col {
+        margin: 20px 0;
+        text-align: center;
+    }
+}
 
 
 /* Responsive Styles */
@@ -445,32 +469,5 @@ button:hover{
         width: 160px;
         padding: 10px 0;
         font-size: 12px;
-    }
-}
-
-/* Responsive Contact Section */
-@media (max-width: 768px) {
-    .contact-form {
-        padding: 15px;
-    }
-
-    .contact-section h2 {
-        font-size: 24px;
-    }
-
-    .contact-section p {
-        font-size: 14px;
-    }
-}
-/* Responsive Footer */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-col {
-        margin: 20px 0;
-        text-align: center;
     }
 }
